@@ -2,6 +2,10 @@ import React from 'react'
 import { ButtonLargeContained } from './styles/Buttons.styled'
 import { Container, FlexContainer } from './styles/Container.styled'
 import { HeroWrapper,ButtonWithCountWr,HeroLeft ,HeroRight,HeroCount} from './styles/Hero.styled'
+import Heroimg1 from '../assets/images/sell-nfts-large.png'
+import HeroimgPersion from '../assets/images/sell-nfts-persion1.png'
+import Icons from './Icons'
+
 
 const HeroSection = () => {
   return (
@@ -32,7 +36,26 @@ const HeroSection = () => {
                     </ButtonWithCountWr>
                 </HeroLeft>
                 <HeroRight>
-                    <h1>Discover, and collect Digital Art  NFTs </h1>
+                    <div className='hero_right'>
+                        <img className='hero_img' src={Heroimg1} />
+                        <div className='profile'>
+                            <h4>Abstr Gradient NFT</h4>
+                            <div className='pro_content'>
+                                <img src={HeroimgPersion} />
+                                <span>Arkhan17</span>
+                            </div>
+                            
+                        </div>
+                        <div>
+                            <div>
+                                <span>Current Bid</span>
+                                <div>
+                                    <span>{Icons.ethereum1}</span>
+                                    <span>0.25 ETH</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </HeroRight>
             </FlexContainer>
         </Container>

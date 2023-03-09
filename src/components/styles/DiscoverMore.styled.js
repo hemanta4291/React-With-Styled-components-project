@@ -55,3 +55,112 @@ export const FilterTabMenu = styled.div`
     }
 `
 
+
+
+// Discover List
+
+export const DiscoverNtfsList = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 40px;
+    margin: 32px 0 0 0;
+`
+export const DiscoverNtfsListItem = styled.div`
+    background: ${({theme})=>theme.color.white};
+    border-radius: 13.16px;
+    padding: 10px;
+    border: 1px solid ${({theme})=>theme.color.bg_rgba};
+
+    & .top_box{
+        position: relative;
+        margin: 0 0 20px 0;
+
+        & .subscribers{
+            position: absolute;
+            bottom: -7px;
+            left: 26px;
+            display: flex;
+
+            & img{
+                margin: 0 0 0 -9px;
+                width: 30px;
+                height: 30px;
+                /* border: 2px solid ${({theme})=>theme.color.white}; */
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+    & .bottom{
+        padding: 0 12px;
+    }
+    & .title{
+        margin: 0 0 10px 0;
+    }
+    & .middle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 20px 0;
+        margin: 0 0 10px 0;
+        border-bottom: 1px solid ${({theme})=>theme.color.gray_3};
+
+        & .middle_left{
+            display: flex;
+            align-items: center;
+            grid-gap: 7px;
+
+            & span{
+                color: ${({theme})=>theme.color.green};
+                font-size: ${({theme})=>theme.fontSize.body5_font_size};
+                font-weight: ${({theme})=>theme.fontWeight.fw_700};
+                line-height: ${({theme})=>theme.lineHeight.lh_14_32};
+            }
+        }
+
+        & .middle_right{
+            color: ${({theme})=>theme.color.gray_40};
+            font-size: ${({theme})=>theme.fontSize.body3_font_size};
+            font-weight: ${({theme})=>theme.fontWeight.fw_500};
+            line-height: ${({theme})=>theme.lineHeight.lh_19_15};
+        }
+    }
+    & .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .f_date{
+            padding: 4px 11px;
+            background: ${({theme})=>theme.color.gray_20};
+            color: ${({theme})=>theme.color.blue_light};
+            font-size: ${({theme})=>theme.fontSize.body6_font_size};
+            font-weight: ${({theme})=>theme.fontWeight.fw_400};
+            line-height: ${({theme})=>theme.lineHeight.lh_19_15};
+            border-radius: 109px;
+
+            & span{
+                font-weight: ${({theme})=>theme.fontWeight.fw_700};
+                
+            }
+        }
+
+        h6{
+            color: ${({theme})=>theme.color.blue_light1};
+            font-size: ${({theme})=>theme.fontSize.body33_font_size};
+            font-weight: ${({theme})=>theme.fontWeight.fw_500};
+            line-height: ${({theme})=>theme.lineHeight.lh_20};
+        }
+    }
+
+`
+
+
+export const LoadMoreBtnWrapper =styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 0 0 0;
+`
+
+

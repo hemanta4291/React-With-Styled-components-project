@@ -20,7 +20,7 @@ body{
     font-family: ${({theme})=>theme.fontFamily.dm_snas};
     font-weight: ${({theme})=>theme.fontWeight.fw_400};
     line-height: ${({theme})=>theme.lineHeight.lh_22_4};
-    letter-spacing: ${({theme})=>theme.letterSpacing.ls_05};
+    /* letter-spacing: ${({theme})=>theme.letterSpacing.ls_05}; */
     background: ${({theme})=>theme.color.white};
 }
 

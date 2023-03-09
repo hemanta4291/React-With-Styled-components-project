@@ -21,6 +21,44 @@ export const HeroLeft = styled.div`
 `
 export const HeroRight = styled.div`
     flex-basis: 40%;
+
+    & .hero_right{
+        position: relative;
+    }
+    & .hero_img{
+        width: 400px;
+        height: 440px;
+        object-fit: cover;
+        border-radius: 24px;
+    }
+    & .profile{
+        position: absolute;
+        top: 26px;
+        left: 26px;
+
+        & h4{
+            color: ${({theme})=>theme.color.white};
+            text-transform: capitalize;
+            margin: 0 0 10px 0;
+        }
+
+        & .pro_content{
+            display: flex;
+            grid-gap: 14px;
+            align-items: center;
+
+            & img{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            & span{
+                color: ${({theme})=>theme.color.white};
+            }
+        }
+    }
 `
 export const ButtonWithCountWr = styled.div`
     position: relative;
