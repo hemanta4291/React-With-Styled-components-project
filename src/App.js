@@ -6,6 +6,7 @@ import GlobalStyle from "./components/styles/Global.styled";
 import { theme } from "./components/styles/Theme";
 import Home from "./pages/Home";
 
+
 function App() {
   return (
     <ThemeProvider theme={theme}>

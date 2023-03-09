@@ -2,10 +2,45 @@ import styled from "styled-components";
 
 export const TopCollectionWrapper = styled.div`
     padding: 118px 0 134px 0;
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+        padding: 60px 0;
+    }
+
+`
+
+
+export const TopFlexContainer = styled.div`
+    display: flex;
+    align-items: ${({alignItem})=> alignItem? alignItem : "center"};
+    justify-content: ${({justify})=> justify? justify : "space-between"};
+    grid-gap: ${({gap})=> gap? gap : ""};
+
+    @media only screen and (max-width: 1199px){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const TopCollectionLeft = styled.div`
     flex: 1;
+
+    @media only screen and (max-width: 1199px){
+        /* width: 100%; */
+    }
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+        & img.left_img{
+            width: 100%;
+        }
+    }
+
+    
     
 `
 export const TopCollectionLeftInner = styled.div`
@@ -114,9 +149,17 @@ export const TopCollectionRight = styled.div`
     flex: 1;
     border-left: 1px solid ${({theme})=>theme.color.gray_5};
     padding-left: 34px;
+
+    & .title{
+        font-family: ${({theme})=>theme.fontFamily.IntegralCFBold};
+        color: ${({theme})=>theme.color.black};
+        font-size: ${({theme})=>theme.fontSize.h5_font_size};
+        font-weight: ${({theme})=>theme.fontWeight.fw_700};
+        line-height: ${({theme})=>theme.lineHeight.lh_26};
+    }
     
     & .sub_title{
-        color: ${({theme})=>theme.color.black};
+        color: ${({theme})=>theme.color.primary};
         font-size: ${({theme})=>theme.fontSize.body2_font_size};
         font-weight: ${({theme})=>theme.fontWeight.fw_700};
         line-height: ${({theme})=>theme.lineHeight.lh_23_44};
@@ -146,7 +189,7 @@ export const CollectionOverList = styled.div`
             position: relative;
             display: inline-flex;
 
-            & img{
+            & .top_author{
                 width: 60px;
                 height: 60px;
                 border-radius: 50%;

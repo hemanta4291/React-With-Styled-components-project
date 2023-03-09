@@ -33,16 +33,19 @@ export const theme = {
         "tw_color":"#55ACEE",
         "in_color":"#007AB9",
         "bg_rgba":"rgba(217, 224, 236, 0.2)",
-        "btn_rgba":"rgba(220, 220, 220, 0.2)"
+        "btn_rgba":"rgba(220, 220, 220, 0.2)",
+        "white_02_rgba":"rgba(255, 255, 255, 0.2)"
     },
     breakPoint:{
         "large":"1200px",
         "tab":"992px",
         "mobile":"768px",
-        "small":"576px"
+        "small":"576px",
+        "mobileExtra":"300px"
     },
     fontFamily:{
-        "dm_snas":"'DM Sans', sans-serif"
+        "dm_snas":"'DM Sans', sans-serif",
+        "IntegralCFBold":"IntegralCFBold",
     },
     fontSize:{
         "h1_font_size":"2.5rem",

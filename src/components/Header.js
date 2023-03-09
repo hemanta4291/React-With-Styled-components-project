@@ -1,20 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FaWindowClose } from 'react-icons/fa';
 import { Container, FlexContainer } from './styles/Container.styled'
-import { HeaderLeft,Input, HeaderRight,HeaderWrapper } from './styles/Header.styled'
+import { HeaderLeft,Input, HeaderRight,HeaderWrapper, FlexHeaderContainer, HeaderMenuClose, HeaderForMobile } from './styles/Header.styled'
 import HeaderLogo from '../assets/images/header-logo.png'
-import { Link, NavLink } from 'react-router-dom'
-import { ButtonLargeContained, ButtonLargeOutline, ButtonMediumContained, ButtonMediumOutline, ButtonSmallContained } from './styles/Buttons.styled'
+import { NavLink } from 'react-router-dom'
+import { ButtonMediumOutline, ButtonSmallContained } from './styles/Buttons.styled'
 import Icons from './Icons'
 const Header = () => {
+
+    const [mobileToggle,setMobileToggle] = useState(false)
+
     let activeStyle = {
         textDecoration: "underline",
       };
     
-      let activeClassName = "underline";
+    let activeClassName = "underline";
+
+    
+    const mobileMenuHandler = (active) => {
+        if(active === 'open'){
+            setMobileToggle(true)
+        }else{
+            setMobileToggle(false)
+        }
+        
+    }
+
   return (
     <HeaderWrapper>
         <Container>
-            <FlexContainer>
+            { !mobileToggle && 
+                <HeaderForMobile>
+                    <img src={HeaderLogo} alt="header logo"/>
+                    <div onClick={()=>mobileMenuHandler("open")}>
+                        {Icons.mobileMenu}
+                    </div>
+                </HeaderForMobile>
+            }
+            
+            <FlexHeaderContainer active={mobileToggle}>
                 <HeaderLeft>
                     <img src={HeaderLogo} alt="header logo"/>
                     <ul>
@@ -65,8 +89,12 @@ const Header = () => {
                         Connect Wallet
                     </ButtonMediumOutline>
                 </HeaderRight>
-            </FlexContainer>
+            </FlexHeaderContainer>
         </Container>
+
+        <HeaderMenuClose onClick={()=>mobileMenuHandler("close")} active={mobileToggle}>
+            {Icons.close}
+        </HeaderMenuClose>
     </HeaderWrapper>
   )
 }

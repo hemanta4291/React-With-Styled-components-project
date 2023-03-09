@@ -16,7 +16,7 @@ const FeaturedSection = () => {
                 <FeturedInnerItem>
                     <div className='content'>
                         <div>
-                            <img src={FeatureImg} />
+                            <img className='content_img' src={FeatureImg} />
                         </div>
                         <div>
                             <div><img src={FeatureImgSmall1} /></div>
@@ -41,7 +41,7 @@ const FeaturedSection = () => {
                 <FeturedInnerItem>
                     <div className='content'>
                         <div>
-                            <img src={FeatureImg} />
+                            <img className='content_img' src={FeatureImg} />
                         </div>
                         <div>
                             <div><img src={FeatureImgSmall1} /></div>
@@ -66,7 +66,7 @@ const FeaturedSection = () => {
                 <FeturedInnerItem>
                     <div className='content'>
                         <div>
-                            <img src={FeatureImg} />
+                            <img className='content_img' src={FeatureImg} />
                         </div>
                         <div>
                             <div><img src={FeatureImgSmall1} /></div>

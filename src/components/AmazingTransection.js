@@ -1,13 +1,13 @@
 import React from 'react'
 import Icons from './Icons'
-import { AmazingWrapper,AmazingRight,AmazingLeft } from './styles/Amazing.styled'
-import { Container, FlexContainer } from './styles/Container.styled'
+import { AmazingWrapper,AmazingRight,AmazingLeft, FlexAmazingContainer } from './styles/Amazing.styled'
+import { Container } from './styles/Container.styled'
 
 const AmazingTransection = () => {
   return (
     <AmazingWrapper>
         <Container>
-            <FlexContainer gap="84px">
+            <FlexAmazingContainer gap="84px">
                 <AmazingLeft>
                     <h3>The amazing NFT art of the world here</h3>
                 </AmazingLeft>
@@ -27,7 +27,7 @@ const AmazingTransection = () => {
                         </div>
                     </div>
                 </AmazingRight>
-            </FlexContainer>
+            </FlexAmazingContainer>
         </Container>
     </AmazingWrapper>
   )

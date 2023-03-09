@@ -1,20 +1,21 @@
 import React from 'react'
 import Icons from './Icons'
 import { Container, FlexContainer } from './styles/Container.styled'
-import { TopCollectionLeft,TopCollectionLeftInner,CollectionOverList,TopCollectionMiddle,CollectionMiddle,TopCollectionRight, TopCollectionWrapper } from './styles/TopCollection.styled'
+import { TopCollectionLeft,TopCollectionLeftInner,CollectionOverList,TopCollectionMiddle,CollectionMiddle,TopCollectionRight, TopCollectionWrapper, TopFlexContainer } from './styles/TopCollection.styled'
 import CollectionImage from '../assets/images/top-collection-large.jpg'
 import Persion from '../assets/images/sell-nfts-persion1.png'
 import TopcollectionLatest1 from '../assets/images/top-collection-middle1.jpg'
 import TopcollectionOver from '../assets/images/top-collect-latest1.png'
+import Verify from '../assets/images/verify 1.png'
 import { ButtonSmallContained } from './styles/Buttons.styled'
 
 const TopCollection = () => {
   return (
     <TopCollectionWrapper>
         <Container>
-            <FlexContainer gap="52px" alignItem="flex-start">
+            <TopFlexContainer gap="52px" alignItem="flex-start">
                 <TopCollectionLeft>
-                    <img src={CollectionImage}  alt="collection image"/>
+                    <img className='left_img' src={CollectionImage}  alt="collection image"/>
                     <TopCollectionLeftInner>
                         <div className='top_left_inner1'>
                             <img src={Persion} alt="persion" />
@@ -103,8 +104,10 @@ const TopCollection = () => {
                         <div className='over_list_item'>
                             <span className='count'>1</span>
                             <div className='middle_left'>
-                                <img src={TopcollectionOver} alt="image" />
-                                <span>{Icons.verify}</span>
+                                <img  className='top_author' src={TopcollectionOver} alt="image" />
+                                <span>
+                                <img src={Verify} alt="image" />
+                                </span>
                             </div>
                             <div className='middle_right'>
                                 <h6>CryptoFunks</h6>
@@ -118,8 +121,10 @@ const TopCollection = () => {
                         <div className='over_list_item'>
                             <span className='count'>1</span>
                             <div className='middle_left'>
-                                <img src={TopcollectionOver} alt="image" />
-                                <span>{Icons.verify}</span>
+                                <img  className='top_author' src={TopcollectionOver} alt="image" />
+                                <span>
+                                <img src={Verify} alt="image" />
+                                </span>
                             </div>
                             <div className='middle_right'>
                                 <h6>CryptoFunks</h6>
@@ -133,8 +138,10 @@ const TopCollection = () => {
                         <div className='over_list_item'>
                             <span className='count'>1</span>
                             <div className='middle_left'>
-                                <img src={TopcollectionOver} alt="image" />
-                                <span>{Icons.verify}</span>
+                                <img  className='top_author' src={TopcollectionOver} alt="image" />
+                                <span>
+                                <img src={Verify} alt="image" />
+                                </span>
                             </div>
                             <div className='middle_right'>
                                 <h6>CryptoFunks</h6>
@@ -148,8 +155,10 @@ const TopCollection = () => {
                         <div className='over_list_item'>
                             <span className='count'>1</span>
                             <div className='middle_left'>
-                                <img src={TopcollectionOver} alt="image" />
-                                <span>{Icons.verify}</span>
+                                <img  className='top_author' src={TopcollectionOver} alt="image" />
+                                <span>
+                                <img src={Verify} alt="image" />
+                                </span>
                             </div>
                             <div className='middle_right'>
                                 <h6>CryptoFunks</h6>
@@ -163,8 +172,10 @@ const TopCollection = () => {
                         <div className='over_list_item'>
                             <span className='count'>1</span>
                             <div className='middle_left'>
-                                <img src={TopcollectionOver} alt="image" />
-                                <span>{Icons.verify}</span>
+                                <img  className='top_author' src={TopcollectionOver} alt="image" />
+                                <span>
+                                <img src={Verify} alt="image" />
+                                </span>
                             </div>
                             <div className='middle_right'>
                                 <h6>CryptoFunks</h6>
@@ -175,9 +186,11 @@ const TopCollection = () => {
                             </div>
                             <h6 className='percentage'>+26.52%</h6>
                         </div>
+                        
+                        
                     </CollectionOverList>
                 </TopCollectionRight>
-            </FlexContainer>
+            </TopFlexContainer>
         </Container>
     </TopCollectionWrapper>
   )

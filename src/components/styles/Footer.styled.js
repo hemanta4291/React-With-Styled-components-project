@@ -28,6 +28,21 @@ export const FooterContainer = styled.div`
             line-height: ${({theme})=>theme.lineHeight.lh_28};
         }
     }
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.tab}) {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 32px;
+    }
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}) {
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 24px;
+    }
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.small}) {
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 16px;
+    }
 `
 export const FooterLeft = styled.div`
     flex: 1;
@@ -103,6 +118,11 @@ export const FooterRight = styled.div`
                 color: ${({theme})=>theme.color.gray_35};
                 font-size:${({theme})=>theme.fontSize.body4_font_size} ;
                 line-height:${({theme})=>(theme.lineHeight.lh_16)} ;
+            }
+
+            @media only screen and (max-width: ${({theme})=>theme.breakPoint.small}) {
+                width: 100%;
+                max-width: 364px;
             }
         }
         

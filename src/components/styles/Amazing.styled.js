@@ -3,10 +3,33 @@ import styled from "styled-components";
 export const AmazingWrapper = styled.div`
     background: ${({theme})=>theme.color.bg_rgba};
     padding: 106px 0 113px 0;
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+        padding: 60px 0;
+    }
+
+    
+`
+
+
+export const FlexAmazingContainer = styled.div`
+    display: flex;
+    align-items: ${({alignItem})=> alignItem? alignItem : "center"};
+    justify-content: ${({justify})=> justify? justify : "space-between"};
+    grid-gap: ${({gap})=> gap? gap : ""};
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.tab}){
+        flex-direction: column;
+    }
 `
 
 export const AmazingLeft = styled.div`
     flex-basis: 40%;
+     /* responsive */
+     @media only screen and (max-width: ${({theme})=>theme.breakPoint.tab}){
+        flex-basis: 100%;
+        width: 100%;
+    }
 `
 
 
@@ -16,6 +39,7 @@ export const AmazingRight = styled.div`
     grid-gap: 56px;
     justify-content: space-between;
     align-items: center;
+
 
 
     & .amazing_inner{
@@ -39,6 +63,12 @@ export const AmazingRight = styled.div`
             font-weight: ${({theme})=>theme.fontWeight.fw_400};
             line-height: ${({theme})=>theme.lineHeight.lh_22_4};
         }
-    }   
+    }
+    
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.small}){
+        flex-direction: column;
+    }
+   
+
 `
 

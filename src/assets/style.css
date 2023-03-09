@@ -5,7 +5,9 @@
     --black: #000;
     --white: #ffffff;
     --gray-90:#220970;
+    --ggi:#3D3D3D;
     --gray-80:#565656;
+    --fsdf:#959595;
     --gray-70:#696969;
     --gray-60:#636363;
     --gray-30:#A4A4A4;
@@ -13,11 +15,19 @@
     --gray-40:#838383;
     --gray-20:#F5F5F5;
     --gray-10:#EFEFEF;
+    --gray-5:#ECECEC;
+    --gray-2:#F0F0F0;
+   
+    --opp:#F4F4F4;
     --ggg:#C0C0C0;
+    --gg: #363639;
+    --ffdfsdf:#3A3A3A;
+
     --green:#14C8B0;
     --green-light:#00AC4F;
     --blue:#3D00B7;
     --blue-light:#5539A8;
+    --blue-lig:#4F33A3;
     --red-80:#FF002E;
     --fb-color:#3B5998;
     --tw-color:#55ACEE;
@@ -40,7 +50,7 @@
 @font-face {
     font-family: "IntegralCFBold";
     src: local("IntegralCFBold"),
-     url("./fonts/integral-cf/integralcf-bold.ttf");
+     url("./fonts/integral-cf/integralcf-bold.otf");
     font-weight: bold;
 }
 
@@ -50,9 +60,13 @@
     /* font-weight: regular; */
 }
 
-body{
+/* body{
     font-family: "IntegralCFRegular";
 }
+
+h1{
+    font-family: "IntegralCFBold";
+} */
 
 
 .App-header{

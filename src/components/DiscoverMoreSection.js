@@ -14,7 +14,7 @@ const DiscoverMoreSection = () => {
     const Item = () =>(
         <DiscoverNtfsListItem>
                     <div className='top_box'>
-                        <img src={Discover} />
+                        <img className='top_large_img' src={Discover} />
                         <div className='subscribers'>
                             <img src={DiscoverPersion1} />
                             <img src={DiscoverPersion2} />

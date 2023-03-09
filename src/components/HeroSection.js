@@ -1,17 +1,21 @@
 import React from 'react'
 import { ButtonLargeContained } from './styles/Buttons.styled'
-import { Container, FlexContainer } from './styles/Container.styled'
-import { HeroWrapper,ButtonWithCountWr,HeroLeft ,HeroRight,HeroCount} from './styles/Hero.styled'
-import Heroimg1 from '../assets/images/sell-nfts-large.png'
+import { Container } from './styles/Container.styled'
+import { HeroWrapper,ButtonWithCountWr,HeroLeft ,HeroRight,HeroCount,BidDateBox, FlexHeroWrapper} from './styles/Hero.styled'
+import Heroimg1 from '../assets/images/hero1.png'
+import Heroimg2 from '../assets/images/hero2.png'
+import Heroimg3 from '../assets/images/hero3.png'
 import HeroimgPersion from '../assets/images/sell-nfts-persion1.png'
+import LiveAuction from '../assets/images/live-auction.png'
 import Icons from './Icons'
+import { FaPlus } from 'react-icons/fa';
 
 
 const HeroSection = () => {
   return (
     <HeroWrapper>
         <Container>
-            <FlexContainer alignItem="flex-start">
+            <FlexHeroWrapper alignItem="flex-start">
                 <HeroLeft>
                     <h1>Discover, and collect Digital Art  NFTs </h1>
                     <p>Digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, Sell, and discover exclusive digital assets.</p>
@@ -21,15 +25,16 @@ const HeroSection = () => {
                         </ButtonLargeContained>
                         <HeroCount>
                             <div>
-                                <h2>98k+</h2>
+                                <h2>98k <FaPlus fontSize="30px"/></h2>
                                 <span>Artwork</span>
                             </div>
                             <div>
-                                <h2>12k+</h2>
+                           
+                                <h2>12k <FaPlus fontSize="30px"/></h2>
                                 <span>Auction</span>
                             </div>
                             <div>
-                                <h2>15k+</h2>
+                                <h2>15k <FaPlus fontSize="30px"/></h2>
                                 <span>Artis</span>
                             </div>
                         </HeroCount>
@@ -37,7 +42,12 @@ const HeroSection = () => {
                 </HeroLeft>
                 <HeroRight>
                     <div className='hero_right'>
-                        <img className='hero_img' src={Heroimg1} />
+                        <div className='hero_banner_wr'>
+                            <img className='hero_img1' src={Heroimg1} />
+                            <img className='hero_img2' src={Heroimg2} />
+                            <img className='hero_img3' src={Heroimg3} />
+                        </div>
+
                         <div className='profile'>
                             <h4>Abstr Gradient NFT</h4>
                             <div className='pro_content'>
@@ -46,18 +56,28 @@ const HeroSection = () => {
                             </div>
                             
                         </div>
-                        <div>
-                            <div>
-                                <span>Current Bid</span>
-                                <div>
+                        <BidDateBox>
+                            <div className='bid_left'>
+                                <span className='bd_title'>Current Bid</span>
+                                <div className='bid_left_content'>
                                     <span>{Icons.ethereum1}</span>
                                     <span>0.25 ETH</span>
                                 </div>
                             </div>
+                            <div className='date_right'>
+                                <span className='bd_title'>Ends in</span>
+                                <div className='date_left_content'>
+                                    <span>12</span>h  <span>43</span> m  <span>42</span> s
+                                </div>
+                            </div>
+                        </BidDateBox>
+                        <div className='live'>
+                            <img src={LiveAuction} />
                         </div>
                     </div>
+                    
                 </HeroRight>
-            </FlexContainer>
+            </FlexHeroWrapper>
         </Container>
     </HeroWrapper>
   )

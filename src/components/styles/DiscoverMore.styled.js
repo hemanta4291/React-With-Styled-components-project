@@ -8,6 +8,10 @@ export const DiscoverMoreWrapper = styled.div`
     & h3{
         margin: 0 0 38px 0;
     }
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+        padding: 60px 0;
+    }
 `
 
 export const FilterTabMenu = styled.div`
@@ -15,10 +19,20 @@ export const FilterTabMenu = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.tab}){
+        flex-wrap: wrap;
+        grid-gap: 20px;
+    }
+
     & ul{
         display: flex;
         align-items: center;
         grid-gap: 12px;
+
+        @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+            flex-wrap: wrap;
+            grid-gap: 20px;
+        }
 
         & li{
             background: ${({theme})=>theme.color.btn_rgba};
@@ -64,6 +78,13 @@ export const DiscoverNtfsList = styled.div`
     grid-template-columns: repeat(4,1fr);
     grid-gap: 40px;
     margin: 32px 0 0 0;
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.tab}){
+        grid-template-columns: repeat(2,1fr); 
+    }
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+        grid-template-columns: repeat(1,1fr); 
+    }
 `
 export const DiscoverNtfsListItem = styled.div`
     background: ${({theme})=>theme.color.white};
@@ -74,6 +95,10 @@ export const DiscoverNtfsListItem = styled.div`
     & .top_box{
         position: relative;
         margin: 0 0 20px 0;
+
+        & .top_large_img{
+            width: 100%;
+        }
 
         & .subscribers{
             position: absolute;

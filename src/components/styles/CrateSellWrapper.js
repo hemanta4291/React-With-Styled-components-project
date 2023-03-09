@@ -3,11 +3,20 @@ import styled from "styled-components";
 
 export const CrateSellWrapper = styled.div`
     padding: 100px 0 82px 0;
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+        padding: 60px 0;
+    }
 `
 
 export const CrateSellInterContainer = styled.div`
     display: flex;
     grid-gap: 78px;
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.tab}){
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 `
 
 export const CrateSellInterContainerLeft = styled.div`
@@ -49,6 +58,15 @@ export const CrateSellInterContainerLeft = styled.div`
                 height: 80px;
                 object-fit: cover;
             }
+    }
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+        flex-direction: column;
+        align-items: center;
+
+        & .sell_left{
+            align-items: center;
+        }
     }
 `
 export const CrateSellInterContainerRight = styled.div`
