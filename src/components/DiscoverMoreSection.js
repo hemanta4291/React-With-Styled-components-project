@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
-import Icons from './Icons'
 import { Container } from './styles/Container.styled'
-import {LoadMoreBtnWrapper,DiscoverMoreWrapper,FilterTabMenu,DiscoverNtfsList } from './styles/DiscoverMore.styled'
+import {LoadMoreBtnWrapper,DiscoverMoreWrapper,DiscoverNtfsList } from './styles/DiscoverMore.styled'
 import { ButtonLargeOutline } from './styles/Buttons.styled'
 import { fetchNtfs } from '../features/nfts/nftsSlice';
 import NtfsBox from './NtfsBox';
@@ -19,7 +18,7 @@ const DiscoverMoreSection = () => {
 
     useEffect(()=>{
         dispatch(fetchNtfs(page))
-    },[page,setPage])
+    },[page,setPage,dispatch])
 
     const loadMoreHandler = (item) => {
         setPage(item)

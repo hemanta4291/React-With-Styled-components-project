@@ -5,17 +5,16 @@ import { HourMinuteSecond } from '../utils/HourMinuteSecond'
 
 const NtfsBox = ({item}) => {
     const {title,stock,sell,place_bid,thumbnail,bid_authors} = item
-    const randomId = Math.random()
     const {hour,minute,second} = HourMinuteSecond()
   return (
         <DiscoverNtfsListItem>
             <div className='top_box'>
-                <img className='top_large_img' src={thumbnail} />
+                <img className='top_large_img' alt='large' src={thumbnail} />
                 <div className='subscribers'>
                     {
                         bid_authors.length > 0 && 
                         bid_authors.map((img,i)=>(
-                            <img src={img} key={i}/>
+                            <img src={img} alt="bid" key={i}/>
                         ))
                     }
                      

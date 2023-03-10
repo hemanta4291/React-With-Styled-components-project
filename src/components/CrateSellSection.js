@@ -2,7 +2,6 @@ import React from 'react'
 import { Container } from './styles/Container.styled'
 import FeatureImg from '../assets/images/sell-nfts-large.png'
 import FeatureMediumImg from '../assets/images/sell-nfts-medium.png'
-import FeatureImgSmall1 from '../assets/images/featured-small1.png'
 import AuthorPic from '../assets/images/sell-nfts-persion1.png'
 import { CrateSellWrapper,CrateSellInterContainer,CrateSellInterContainerLeft,CrateSellInterContainerRight } from './styles/CrateSellWrapper'
 import { ButtonLargeContained } from './styles/Buttons.styled'
@@ -17,18 +16,18 @@ const CrateSellSection = () => {
                 <CrateSellInterContainerLeft>
                     <div className='sell_left'>
                         <div className='sell_left_box'>
-                            <img src={FeatureImg} />
-                            <img className='sell_left_author' src={AuthorPic} />
+                            <img src={FeatureImg}  alt="f_img"/>
+                            <img className='sell_left_author' alt='sel author' src={AuthorPic} />
                         </div>
-                        <div className='sell_left_box'>
-                            <img src={FeatureMediumImg} />
-                            <img className='sell_left_author' src={AuthorPic} />
+                        <div className='sell_left_box' alt="sell box">
+                            <img src={FeatureMediumImg} alt="sell medium" />
+                            <img className='sell_left_author' alt='sell author' src={AuthorPic} />
                         </div>
                     </div>
 
                     <div className='sell_right_box'>
-                            <img src={FeatureMediumImg} />
-                            <img  className='sell_left_author' src={AuthorPic} />
+                            <img src={FeatureMediumImg} alt="featureImg" />
+                            <img  className='sell_left_author' alt='sell author' src={AuthorPic} />
                         </div>
                 </CrateSellInterContainerLeft>
                 <CrateSellInterContainerRight>

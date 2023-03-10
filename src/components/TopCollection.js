@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react'
 import Icons from './Icons'
-import { Container, FlexContainer } from './styles/Container.styled'
-import { TopCollectionLeft,TopCollectionLeftInner,CollectionOverList,TopCollectionMiddle,CollectionMiddle,TopCollectionRight, TopCollectionWrapper, TopFlexContainer, TopCollectionRightWrapper } from './styles/TopCollection.styled'
-import CollectionImage from '../assets/images/top-collection-large.jpg'
-import Persion from '../assets/images/sell-nfts-persion1.png'
-import TopcollectionLatest1 from '../assets/images/top-collection-middle1.jpg'
-import { ButtonSmallContained, ButtonSmallOutline } from './styles/Buttons.styled'
+import { Container } from './styles/Container.styled'
+import { TopCollectionLeft,TopCollectionLeftInner,TopCollectionMiddle,CollectionMiddle,TopCollectionRight, TopCollectionWrapper, TopFlexContainer, TopCollectionRightWrapper } from './styles/TopCollection.styled'
+import { ButtonSmallOutline } from './styles/Buttons.styled'
 import TopCollectionOver from './TopCollectionOver'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchTopFeaturedNtfs } from '../features/topFeaturedNfts/topFeaturedNftsSlice'
@@ -21,7 +18,7 @@ const TopCollection = () => {
 
     useEffect(()=>{
         dispatch(fetchTopFeaturedNtfs())
-    },[])
+    },[dispatch])
 
     let renderContent = null
 
@@ -43,7 +40,7 @@ const TopCollection = () => {
             const {id,title,author_pic,total_eth,stock,picture,sell} = item
             return(
                 <div className='top_middle_item' key={id}>
-                    <img src={picture} alt="image" />
+                    <img src={picture} alt="collect" />
                     <CollectionMiddle>
                         <h5>{title}</h5>
                         <div className='collection_inner'>
@@ -75,7 +72,7 @@ const TopCollection = () => {
                 {
                     isLoading ? <LoadingText/>  : 
                     <TopCollectionLeft>
-                        <img className='left_img' src={picture}  alt="collection image"/>
+                        <img className='left_img' src={picture}  alt="collection1"/>
                         <TopCollectionLeftInner>
                             <div className='top_left_inner1'>
                                 <img src={author_pic} alt="persion" />

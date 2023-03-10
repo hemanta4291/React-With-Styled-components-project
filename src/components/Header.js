@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { FaWindowClose } from 'react-icons/fa';
-import { Container, FlexContainer } from './styles/Container.styled'
+import { Container } from './styles/Container.styled'
 import { HeaderLeft,Input, HeaderRight,HeaderWrapper, FlexHeaderContainer, HeaderMenuClose, HeaderForMobile } from './styles/Header.styled'
 import HeaderLogo from '../assets/images/header-logo.png'
 import { Link, NavLink } from 'react-router-dom'

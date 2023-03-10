@@ -1,7 +1,7 @@
 import { getTopOverNtfs } from "./topOverNftsApi";
 
 
-const { createSlice, createAsyncThunk,current } = require("@reduxjs/toolkit");
+const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 const initialState = {
     topOverNtfs: [],

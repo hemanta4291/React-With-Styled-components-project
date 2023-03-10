@@ -1,7 +1,7 @@
 import { getFeaturedNtfs } from "./featuredNftsApi";
 
 
-const { createSlice, createAsyncThunk,current } = require("@reduxjs/toolkit");
+const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 const initialState = {
     featuredNtfs: [],

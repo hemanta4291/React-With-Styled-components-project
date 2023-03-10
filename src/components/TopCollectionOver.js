@@ -15,7 +15,7 @@ const TopCollectionOver = () => {
 
     useEffect(()=>{
         dispatch(fetchTopOverNtfs())
-    },[])
+    },[dispatch])
 
 
     let renderContent = null
@@ -41,11 +41,11 @@ const TopCollectionOver = () => {
                 <div className='over_list_item' key={id}>
                 <span className='count'>{id}</span>
                 <div className='middle_left'>
-                    <img  className='top_author' src={picture} alt="image" />
+                    <img  className='top_author' src={picture} alt="author" />
                     {
                         active && 
                         <span>
-                            <img src={Verify} alt="image" />
+                            <img src={Verify} alt="verify" />
                         </span>
                     }
                     

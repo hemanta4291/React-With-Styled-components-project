@@ -45,15 +45,15 @@ const HeroSection = () => {
                 <HeroRight>
                     <div className='hero_right'>
                         <div className='hero_banner_wr'>
-                            <img className='hero_img1' src={Heroimg1} />
-                            <img className='hero_img2' src={Heroimg2} />
-                            <img className='hero_img3' src={Heroimg3} />
+                            <img className='hero_img1' alt="hero_img1" src={Heroimg1} />
+                            <img className='hero_img2' alt="hero_img2" src={Heroimg2} />
+                            <img className='hero_img3' alt="hero_img3" src={Heroimg3} />
                         </div>
 
                         <div className='profile'>
                             <h4>Abstr Gradient NFT</h4>
                             <div className='pro_content'>
-                                <img src={HeroimgPersion} />
+                                <img src={HeroimgPersion} alt="hero" />
                                 <span>Arkhan17</span>
                             </div>
                             
@@ -74,7 +74,7 @@ const HeroSection = () => {
                             </div>
                         </BidDateBox>
                         <div className='live'>
-                            <img src={LiveAuction} />
+                            <img src={LiveAuction} alt="live" />
                         </div>
                     </div>
                     

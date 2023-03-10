@@ -14,7 +14,7 @@ const FeaturedSection = () => {
 
     useEffect(()=>{
         dispatch(fetchFeaturedNtfs())
-    },[])
+    },[dispatch])
 
 
     let renderContent = null

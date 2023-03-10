@@ -1,7 +1,7 @@
 import { getNtfs } from "./nftsApi";
 import { ntfs } from "../../demo-data/ntfs-demo"
 
-const { createSlice, createAsyncThunk,current } = require("@reduxjs/toolkit");
+const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 const initialState = {
     ntfs: [],
@@ -26,14 +26,10 @@ const nftsSlice = createSlice({
     initialState,
     reducers: {
         categorySelected: (state, action) => {
-
-            // const {ntfs} = current(state)
             let filteredData = ntfs.filter((item,i)=>{
-                if(item.categories.includes(action.payload.toLowerCase())){
-                    return item
-                }
+                return item.categories.includes(action.payload.toLowerCase())
+                
             })
-            // console.log({filteredData})
             state.selectedCategory=action.payload;
             state.ntfs = filteredData
 
