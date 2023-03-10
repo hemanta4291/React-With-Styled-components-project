@@ -18,7 +18,14 @@ export const TopFlexContainer = styled.div`
 
     @media only screen and (max-width: 1199px){
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
+/* 
+        & >div:first-child{
+            width: 100%;
+        }
+        & >div:not(:first-child){
+           flex: 1;
+        } */
     }
 
     @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
@@ -28,10 +35,14 @@ export const TopFlexContainer = styled.div`
 `
 
 export const TopCollectionLeft = styled.div`
-    flex: 1;
+    flex-basis:30%;
 
     @media only screen and (max-width: 1199px){
-        /* width: 100%; */
+        width: 100%;
+        flex-basis: 100%;
+        & img.left_img{
+            width: 100%;
+        }
     }
 
     @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
@@ -96,8 +107,23 @@ export const TopCollectionLeftInner = styled.div`
 
     }
 `
+export const TopCollectionRightWrapper=styled.div`
+    flex-basis: 70%;
+    display: flex;
+    grid-gap: 45px;
+
+    @media only screen and (max-width: 1199px){
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    @media only screen and (max-width: ${({theme})=>theme.breakPoint.mobile}){
+        flex-direction: column;
+    }
+`
+
 export const TopCollectionMiddle = styled.div`
-    
+    flex: 1;
     & .top_middle_item + .top_middle_item{
         margin-top: 40px;
     }
@@ -138,6 +164,7 @@ export const CollectionMiddle = styled.div`
     }
 
     & .out_of{
+        flex-shrink: 0;
         font-size: ${({theme})=>theme.fontSize.body3_font_size};
         color:${({theme})=>theme.color.gray_50};
     }
@@ -221,6 +248,7 @@ export const CollectionOverList = styled.div`
                 & span{
                     display: inline-flex;
                     color: ${({theme})=>theme.color.black};
+                    font-family: ${({theme})=>theme.fontFamily.Poppins};
                     font-size: ${({theme})=>theme.fontSize.body3_font_size};
                     font-weight: ${({theme})=>theme.fontWeight.fw_600};
                     line-height: ${({theme})=>theme.lineHeight.lh_14};
@@ -229,11 +257,18 @@ export const CollectionOverList = styled.div`
             }
         }
         & .percentage{
-            color: ${({theme})=>theme.color.red_80};
+            color: ${({theme})=>theme.color.black};
+            font-family: ${({theme})=>theme.fontFamily.Poppins};
             font-size: ${({theme})=>theme.fontSize.h5_font_size};
             font-weight: ${({theme})=>theme.fontWeight.fw_600};
             line-height: ${({theme})=>theme.lineHeight.lh_20_83};
             letter-spacing: ${({theme})=>theme.letterSpacing.ls_025};
+        }
+        .active_class{
+            color: ${({theme})=>theme.color.green};
+        }
+        .de_active_class{
+            color: ${({theme})=>theme.color.red_80};
         }
     }
 

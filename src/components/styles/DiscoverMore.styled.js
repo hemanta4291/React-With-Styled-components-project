@@ -43,6 +43,12 @@ export const FilterTabMenu = styled.div`
             font-size: ${({theme})=>theme.fontSize.body3_font_size};
             font-weight: ${({theme})=>theme.fontWeight.fw_500};
             line-height: ${({theme})=>theme.lineHeight.lh_17};
+            transition: all linear 0.3s;
+
+            &:hover{
+                background: ${({theme})=>theme.color.primary};
+                color: ${({theme})=>theme.color.white};
+            }
         }
         & li.active{
             background: ${({theme})=>theme.color.primary};

@@ -1,83 +1,67 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from "react-redux";
 import Icons from './Icons'
 import { Container } from './styles/Container.styled'
-import {LoadMoreBtnWrapper,DiscoverMoreWrapper,FilterTabMenu,DiscoverNtfsList,DiscoverNtfsListItem } from './styles/DiscoverMore.styled'
-import Discover from '../assets/images/discover.png'
-import DiscoverPersion1 from '../assets/images/discover-persion1.png'
-import DiscoverPersion2 from '../assets/images/discover-persion2.png'
-import DiscoverPersion3 from '../assets/images/discover-persion3.png'
-import DiscoverPersion4 from '../assets/images/discover-persion4.png'
+import {LoadMoreBtnWrapper,DiscoverMoreWrapper,FilterTabMenu,DiscoverNtfsList } from './styles/DiscoverMore.styled'
 import { ButtonLargeOutline } from './styles/Buttons.styled'
+import { fetchNtfs } from '../features/nfts/nftsSlice';
+import NtfsBox from './NtfsBox';
+import FilterMenuByCategories from './FilterMenuByCategories';
+import LoadingText from './LoadingText';
 
 const DiscoverMoreSection = () => {
+    const dispatch = useDispatch();
+    const { ntfs, isLoading, isError, error } = useSelector(
+        (state) => state.ntfs
+    );
 
-    const Item = () =>(
-        <DiscoverNtfsListItem>
-                    <div className='top_box'>
-                        <img className='top_large_img' src={Discover} />
-                        <div className='subscribers'>
-                            <img src={DiscoverPersion1} />
-                            <img src={DiscoverPersion2} />
-                            <img src={DiscoverPersion3} />
-                            <img src={DiscoverPersion4} />
-                        </div>
-                    </div>
-                    <div className='bottom'>
-                        <h5 className='title'>ArtCrypto</h5>
-                        <div className='middle'>
-                            <div className='middle_left'>
-                                <span>{Icons.ethereum2}</span>
-                                <span>0.25 ETH</span>
-                            </div>
-                            <span className='middle_right'>1 of 321</span>
-                        </div>
-                        <div className='footer'>
-                            <div className='f_date'><span>3</span>h <span>50</span>m <span>2</span>s <span>left</span></div>
-                            <h6>Place a bid</h6>
-                        </div>
-                    </div>
-        </DiscoverNtfsListItem>
-    )
+    const [page,setPage] = useState(1)
+
+    useEffect(()=>{
+        dispatch(fetchNtfs(page))
+    },[page,setPage])
+
+    const loadMoreHandler = (item) => {
+        setPage(item)
+    }
+
+
+    let renderContent = null
+
+    renderContent = isError && <h2>{error}</h2>
+
+
+
+    if (isLoading) renderContent = <LoadingText font_size='16px' img_width='100px'/>;
+    if (!isLoading && isError)
+    renderContent = <h2>{error}</h2>;
+
+    if (!isError && !isLoading && ntfs?.length === 0) {
+        renderContent = <div className="col-span-12">No NTfs found!</div>;
+    }
+
+    if (!isError && !isLoading && ntfs?.length > 0) {
+       
+        renderContent = ntfs.map((ntf)=>(
+            <NtfsBox item= {ntf} key={ntf.id}/>
+        ))
+
+    }
+
+
 
   return (
     <DiscoverMoreWrapper>
         <Container>
             <h3>Discover more NFTs</h3>
-            <FilterTabMenu>
-                <ul>
-                    <li className='active'>All Categories</li>
-                    <li>Arts</li>
-                    <li>Celebrities</li>
-                    <li>Gaming</li>
-                    <li>Sport</li>
-                    <li>Music</li>
-                    <li>Crypto</li>
-                </ul>
-                <div className='filter'>
-                    <span>{Icons.filter}</span>
-                    <span>All Filters</span>
-                </div>
-            </FilterTabMenu>
+            <FilterMenuByCategories/>
             <DiscoverNtfsList>
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
-                {<Item/>}
+                {/* Here render view content */}
+                {renderContent}
+                
             </DiscoverNtfsList>
             <LoadMoreBtnWrapper>
-                <ButtonLargeOutline>
+                <ButtonLargeOutline onClick={()=>loadMoreHandler(2)}>
                     More NFTs
                 </ButtonLargeOutline>
             </LoadMoreBtnWrapper>

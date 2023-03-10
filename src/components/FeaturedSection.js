@@ -1,93 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import {useDispatch,useSelector} from 'react-redux'
+import { fetchFeaturedNtfs } from '../features/featuredNfts/featuredNftsSlice'
+import FeaturedBox from './FeaturedBox'
 import { Container } from './styles/Container.styled'
-import { FeaturedWrapper,FeturedInner,FeturedInnerItem } from './styles/Featured.styled'
-import FeatureImg from '../assets/images/featured-large1.png'
-import FeatureImgSmall1 from '../assets/images/featured-small1.png'
-import AuthorPic from '../assets/images/sell-nfts-persion1.png'
-import { ButtonExtraSmallOutline } from './styles/Buttons.styled'
-
+import { FeaturedWrapper,FeturedInner } from './styles/Featured.styled'
 
 const FeaturedSection = () => {
+    const dispatch = useDispatch();
+    const { featuredNtfs, isLoading, isError, error } = useSelector(
+        (state) => state.featuredNtfs
+    );
+
+    useEffect(()=>{
+        dispatch(fetchFeaturedNtfs())
+    },[])
+
+
   return (
     <FeaturedWrapper>
         <Container>
             <h4>Collection Featured NFTs</h4>
             <FeturedInner>
-                <FeturedInnerItem>
-                    <div className='content'>
-                        <div>
-                            <img className='content_img' src={FeatureImg} />
-                        </div>
-                        <div>
-                            <div><img src={FeatureImgSmall1} /></div>
-                            <div><img src={FeatureImgSmall1} /></div>
-                            <div><img src={FeatureImgSmall1} /></div>
-                        </div>
-                    </div>
-                    <div className='author'>
-                        <div>
-                            <h5>Amazing Collection</h5>
-                            <div className='author_profile'>
-                                <img src={AuthorPic} />
-                                <h6>by Arkhan</h6>
-                            </div>
-                            
-                        </div>
-                        <ButtonExtraSmallOutline>
-                            Total 54 Items
-                        </ButtonExtraSmallOutline>
-                    </div>
-                </FeturedInnerItem>
-                <FeturedInnerItem>
-                    <div className='content'>
-                        <div>
-                            <img className='content_img' src={FeatureImg} />
-                        </div>
-                        <div>
-                            <div><img src={FeatureImgSmall1} /></div>
-                            <div><img src={FeatureImgSmall1} /></div>
-                            <div><img src={FeatureImgSmall1} /></div>
-                        </div>
-                    </div>
-                    <div className='author'>
-                        <div>
-                            <h5>Amazing Collection</h5>
-                            <div className='author_profile'>
-                                <img src={AuthorPic} />
-                                <h6>by Arkhan</h6>
-                            </div>
-                            
-                        </div>
-                        <ButtonExtraSmallOutline>
-                            Total 54 Items
-                        </ButtonExtraSmallOutline>
-                    </div>
-                </FeturedInnerItem>
-                <FeturedInnerItem>
-                    <div className='content'>
-                        <div>
-                            <img className='content_img' src={FeatureImg} />
-                        </div>
-                        <div>
-                            <div><img src={FeatureImgSmall1} /></div>
-                            <div><img src={FeatureImgSmall1} /></div>
-                            <div><img src={FeatureImgSmall1} /></div>
-                        </div>
-                    </div>
-                    <div className='author'>
-                        <div>
-                            <h5>Amazing Collection</h5>
-                            <div className='author_profile'>
-                                <img src={AuthorPic} />
-                                <h6>by Arkhan</h6>
-                            </div>
-                            
-                        </div>
-                        <ButtonExtraSmallOutline>
-                            Total 54 Items
-                        </ButtonExtraSmallOutline>
-                    </div>
-                </FeturedInnerItem>
+                { featuredNtfs.length>0 && 
+                    featuredNtfs.map((item)=>(
+                        <FeaturedBox key={item.id} item={item}/>
+                    ))
+                }
             </FeturedInner>
         </Container>
     </FeaturedWrapper>

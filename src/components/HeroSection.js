@@ -9,9 +9,11 @@ import HeroimgPersion from '../assets/images/sell-nfts-persion1.png'
 import LiveAuction from '../assets/images/live-auction.png'
 import Icons from './Icons'
 import { FaPlus } from 'react-icons/fa';
+import { HourMinuteSecond } from '../utils/HourMinuteSecond'
 
 
 const HeroSection = () => {
+    const {hour,minute,second} = HourMinuteSecond()
   return (
     <HeroWrapper>
         <Container>
@@ -67,7 +69,7 @@ const HeroSection = () => {
                             <div className='date_right'>
                                 <span className='bd_title'>Ends in</span>
                                 <div className='date_left_content'>
-                                    <span>12</span>h  <span>43</span> m  <span>42</span> s
+                                    <span>{hour}</span>h  <span>{minute}</span> m  <span>{second}</span> s
                                 </div>
                             </div>
                         </BidDateBox>

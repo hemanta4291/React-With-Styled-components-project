@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ButtonLargeContained = styled.button`
     background: ${({theme})=>theme.color.primary};
-    border: 1px solid ${({theme})=>theme.color.primary};
+    border: 2px solid ${({theme})=>theme.color.primary};
     color: ${({theme})=>theme.color.white};
     font-size: ${({theme})=>theme.fontSize.h5_font_size};
     font-weight: ${({theme})=>theme.fontWeight.fw_400};
@@ -11,6 +11,14 @@ export const ButtonLargeContained = styled.button`
     padding: 20px 40px;
     cursor: pointer;
     flex-shrink: 0;
+    transition: all linear 0.3s;
+
+
+    &:hover{
+        background: ${({theme})=>theme.color.white};
+        border-color: ${({theme})=>theme.color.primary};
+        color: ${({theme})=>theme.color.primary};
+    }
 
 `
 
@@ -25,6 +33,13 @@ export const ButtonLargeOutline = styled.button`
     padding: 20px 40px;
     cursor: pointer;
     flex-shrink: 0;
+    transition: all linear 0.3s;
+
+    &:hover{
+        background: ${({theme})=>theme.color.primary};
+        border-color: ${({theme})=>theme.color.primary};
+        color: ${({theme})=>theme.color.white};
+    }
 
 `
 
@@ -41,6 +56,13 @@ export const ButtonMediumContained = styled.button`
     padding: 15px 22px;
     cursor: pointer;
     flex-shrink: 0;
+    transition: all linear 0.3s;
+
+    &:hover{
+        background: ${({theme})=>theme.color.white};
+        border-color: ${({theme})=>theme.color.primary};
+        color: ${({theme})=>theme.color.primary};
+    }
 
 `
 
@@ -56,12 +78,19 @@ export const ButtonMediumOutline = styled.button`
     padding: 15px 22px;
     cursor: pointer;
     flex-shrink: 0;
+    transition: all linear 0.3s;
+
+    &:hover{
+        background: ${({theme})=>theme.color.primary};
+        border-color: ${({theme})=>theme.color.primary};
+        color: ${({theme})=>theme.color.white};
+    }
 `
 
 
 export const ButtonSmallContained = styled.button`
     background: ${({theme})=>theme.color.primary};
-    border: 1px solid ${({theme})=>theme.color.primary};
+    border: 2px solid ${({theme})=>theme.color.primary};
     color: ${({theme})=>theme.color.white};
     font-size: ${({theme})=>theme.fontSize.body3_font_size};
     font-weight: ${({theme})=>theme.fontWeight.fw_700};
@@ -71,6 +100,13 @@ export const ButtonSmallContained = styled.button`
     padding: 14px 20px;
     cursor: pointer;
     flex-shrink: 0;
+    transition: all linear 0.3s;
+
+    &:hover{
+        background: ${({theme})=>theme.color.white};
+        border-color: ${({theme})=>theme.color.primary};
+        color: ${({theme})=>theme.color.primary};
+    }
 
 `
 
@@ -86,6 +122,13 @@ export const ButtonSmallOutline = styled.button`
     padding: 14px 20px;
     cursor: pointer;
     flex-shrink: 0;
+    transition: all linear 0.3s;
+
+    &:hover{
+        background: ${({theme})=>theme.color.primary};
+        border-color: ${({theme})=>theme.color.primary};
+        color: ${({theme})=>theme.color.white};
+    }
 `
 
 
@@ -101,6 +144,7 @@ export const ButtonExtraSmallContained = styled.button`
     padding: 10px 20px;
     cursor: pointer;
     flex-shrink: 0;
+    transition: all linear 0.3s;
 
 `
 
@@ -115,4 +159,13 @@ export const ButtonExtraSmallOutline = styled.button`
     padding: 14px 20px;
     cursor: pointer;
     flex-shrink: 0;
+    transition: all linear 0.3s;
+
+
+    &:hover{
+        background: ${({theme})=>theme.color.secondary_dark};
+        border-color: ${({theme})=>theme.color.secondary_dark};
+        color: ${({theme})=>theme.color.white};
+    }
+
 `

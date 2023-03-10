@@ -50,6 +50,11 @@ export const HeaderLeft = styled.div`
             font-size:${({theme})=>theme.fontSize.body1_font_size} ;
             line-height:${({theme})=>(theme.lineHeight.lh_38_4)} ;
             letter-spacing:${({theme})=>(theme.letterSpacing.ls_04)};
+            transition: all linear 0.3s;
+
+            &:hover{
+                color: ${({theme})=>theme.color.secondary_dark};
+            }
         }
 
         @media only screen and (min-width: ${({theme})=>theme.breakPoint.tab}) and (max-width: 1199px) {

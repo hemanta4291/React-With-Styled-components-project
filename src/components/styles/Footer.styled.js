@@ -26,6 +26,15 @@ export const FooterContainer = styled.div`
             font-size: ${({theme})=>theme.fontSize.body3_font_size};
             font-weight: ${({theme})=>theme.fontWeight.fw_500};
             line-height: ${({theme})=>theme.lineHeight.lh_28};
+            
+            & a{
+                color: ${({theme})=>theme.color.gray_89};
+                transition: all linear 0.3s;
+
+                &:hover{
+                    color: ${({theme})=>theme.color.secondary_dark};
+                }
+            }
         }
     }
 
@@ -59,22 +68,54 @@ export const FooterLeft = styled.div`
         align-items: center;
         grid-gap: 16px;
 
-        & li{
+        & li a{
             width: 36px;
             height: 36px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
+            border: 2px solid;
+            transition: all linear 0.3s;
+
+            & svg path{
+                transition: all linear 0.4s;
+            }
         }
-        & li.facebook{
+        & a.facebook{
             background: ${({theme})=>theme.color.fb_color};
+            border-color: ${({theme})=>theme.color.fb_color};
+
+            &:hover{
+                background: transparent;
+            }
+            &:hover svg path{
+                fill:${({theme})=>theme.color.fb_color}
+            }
+
         }
-        & li.twitter{
+        & a.twitter{
             background: ${({theme})=>theme.color.tw_color};
+            border-color: ${({theme})=>theme.color.tw_color};
+            
+            &:hover{
+                background: transparent;
+            }
+            &:hover svg path{
+                fill:${({theme})=>theme.color.tw_color}
+            }
         }
-        & li.linkdin{
+        & a.linkdin{
             background: ${({theme})=>theme.color.in_color};
+            border-color: ${({theme})=>theme.color.in_color};
+            
+            &:hover{
+                background: transparent;
+            }
+
+            &:hover svg path{
+                fill:${({theme})=>theme.color.in_color}
+            }
         }
     }
 `
@@ -140,6 +181,13 @@ export const FooterRight = styled.div`
             padding: 15px 27px;
             cursor: pointer;
             flex-shrink: 0;
+            transition: all linear 0.3s;
+
+            &:hover{
+                background: transparent;
+                /* border: 1px solid ${({theme})=>theme.color.secondary_dark}; */
+                color: ${({theme})=>theme.color.secondary_dark};
+            }
         }
     }
 `

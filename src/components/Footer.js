@@ -3,6 +3,7 @@ import { Container } from './styles/Container.styled'
 import { FooterWrapper,FooterCopyWrite,FooterContainer,FooterLeft,FooterMiddle1,FooterMiddle2,FooterRight } from './styles/Footer.styled'
 import Logo from '../assets/images/header-logo.png'
 import Icons from './Icons'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -13,30 +14,30 @@ const Footer = () => {
             <img src={Logo} />
             <p>The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital items.</p>
             <ul className='social'>
-                <li className='facebook'> <a href='#'/>{Icons.facebook}</li>
-                <li className='twitter'> <a href='#'/>{Icons.twitter}</li>
-                <li className='linkdin'> <a href='#'/>{Icons.linkdin}</li>
+                <li><Link to="/" className='facebook' >{Icons.facebook}</Link></li>
+                <li ><Link to="/" className='twitter'>{Icons.twitter}</Link></li>
+                <li ><Link to="/" className='linkdin'>{Icons.linkdin}</Link></li>
             </ul>
           </FooterLeft>
           <FooterMiddle1>
             <h6>Market Place</h6>
             <ul className='footer_link'>
-              <li> <a href="#" />All NFTs</li>
-              <li> <a href="#" />New</li>
-              <li> <a href="#" />Art</li>
-              <li> <a href="#" />Sports</li>
-              <li> <a href="#" />Utility</li>
-              <li> <a href="#" />Music</li>
-              <li> <a href="#" />Domain Name</li>
+              <li><Link to='/'>All NFTs</Link></li>
+              <li><Link to='/'>New</Link></li>
+              <li><Link to='/'>Arts</Link></li>
+              <li><Link to='/'>Sports</Link></li>
+              <li><Link to='/'>Utility</Link></li>
+              <li><Link to='/'>Music</Link></li>
+              <li><Link to='/'>Domain Name</Link></li>
             </ul>
           </FooterMiddle1>
           <FooterMiddle2>
             <h6>My Account</h6>
             <ul className='footer_link'>
-              <li> <a href="#" />Profile</li>
-              <li> <a href="#" />Favorite</li>
-              <li> <a href="#" />My Collections</li>
-              <li> <a href="#" />Settings</li>
+              <li><Link to='/'>Profile</Link></li>
+              <li><Link to='/'>Favorite</Link></li>
+              <li><Link to='/'>My Collections</Link></li>
+              <li><Link to='/'>Settings</Link></li>
             </ul>
           </FooterMiddle2>
           <FooterRight>

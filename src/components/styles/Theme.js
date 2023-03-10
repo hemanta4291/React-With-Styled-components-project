@@ -46,6 +46,7 @@ export const theme = {
     fontFamily:{
         "dm_snas":"'DM Sans', sans-serif",
         "IntegralCFBold":"IntegralCFBold",
+        "Poppins":"'Poppins', sans-serif"
     },
     fontSize:{
         "h1_font_size":"2.5rem",
@@ -65,6 +66,7 @@ export const theme = {
         "fw_900":"900",
         "fw_800":"800",
         "fw_700":"700",
+        "fw_600":"600",
         "fw_500":"500",
         "fw_400":"400",
         "fw_300":"300",
