@@ -16,7 +16,6 @@ const initialState = {
 export const fetchNtfs = createAsyncThunk(
     "ntfs/fetchNtfs",
     async (page) => {
-        console.log(page)
         const ntfs = await getNtfs(page);
         return ntfs;
     }
@@ -31,7 +30,6 @@ const nftsSlice = createSlice({
             // const {ntfs} = current(state)
             let filteredData = ntfs.filter((item,i)=>{
                 if(item.categories.includes(action.payload.toLowerCase())){
-                    console.log("dfsdfs")
                     return item
                 }
             })

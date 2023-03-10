@@ -4,7 +4,7 @@ import Icons from './Icons'
 import { HourMinuteSecond } from '../utils/HourMinuteSecond'
 
 const NtfsBox = ({item}) => {
-    const {title,out_of,place_bid,thumbnail,bid_authors} = item
+    const {title,stock,sell,place_bid,thumbnail,bid_authors} = item
     const randomId = Math.random()
     const {hour,minute,second} = HourMinuteSecond()
   return (
@@ -28,7 +28,7 @@ const NtfsBox = ({item}) => {
                         <span>{Icons.ethereum2}</span>
                         <span>0.25 ETH</span>
                     </div>
-                    <span className='middle_right'>{out_of}</span>
+                    <span className='middle_right'>{sell} of {stock}</span>
                 </div>
                 <div className='footer'>
                     <div className='f_date'><span>{hour}</span>h <span>{minute}</span>m <span>{second}</span>s <span>left</span></div>

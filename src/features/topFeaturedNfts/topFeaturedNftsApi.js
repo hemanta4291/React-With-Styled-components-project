@@ -1,5 +1,6 @@
 
 import { topFeaturedNtfs } from "../../demo-data/top-collection-featured-demo"
+
 export const getTopFeaturedNtfs = async() =>{
     let status = true
     let promise = new Promise((res,rej)=>{

@@ -3,7 +3,7 @@ import { FaWindowClose } from 'react-icons/fa';
 import { Container, FlexContainer } from './styles/Container.styled'
 import { HeaderLeft,Input, HeaderRight,HeaderWrapper, FlexHeaderContainer, HeaderMenuClose, HeaderForMobile } from './styles/Header.styled'
 import HeaderLogo from '../assets/images/header-logo.png'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { ButtonMediumOutline, ButtonSmallContained } from './styles/Buttons.styled'
 import Icons from './Icons'
 const Header = () => {
@@ -31,7 +31,7 @@ const Header = () => {
         <Container>
             { !mobileToggle && 
                 <HeaderForMobile>
-                    <img src={HeaderLogo} alt="header logo"/>
+                    <Link to="/"> <img src={HeaderLogo} alt="header logo"/></Link>
                     <div onClick={()=>mobileMenuHandler("open")}>
                         {Icons.mobileMenu}
                     </div>
@@ -40,11 +40,11 @@ const Header = () => {
             
             <FlexHeaderContainer active={mobileToggle}>
                 <HeaderLeft>
-                    <img src={HeaderLogo} alt="header logo"/>
+                    <Link to="/"> <img src={HeaderLogo} alt="header logo"/></Link>
                     <ul>
                         <li>
                         <NavLink
-                            to="messages"
+                            to="market"
                             style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                             }
@@ -54,7 +54,7 @@ const Header = () => {
                         </li>
                         <li>
                         <NavLink
-                            to="tasks"
+                            to="resource"
                             className={({ isActive }) =>
                             isActive ? activeClassName : undefined
                             }
@@ -63,7 +63,7 @@ const Header = () => {
                         </NavLink>
                         </li>
                         <li>
-                        <NavLink to="tasks">
+                        <NavLink to="about">
                             {({ isActive }) => (
                             <span
                                 className={

@@ -134,6 +134,13 @@ export const TopCollectionMiddle = styled.div`
         display: flex;
         grid-gap: 20px;
         align-items: center;
+
+        @media only screen and (max-width: ${({theme})=>theme.breakPoint.small}){
+            & img{
+                width: 36%;
+            }
+        }
+
     }
 `
 export const CollectionMiddle = styled.div`
@@ -221,6 +228,7 @@ export const CollectionOverList = styled.div`
                 height: 60px;
                 border-radius: 50%;
                 object-fit: cover;
+                
             }
 
             & span{
@@ -269,6 +277,28 @@ export const CollectionOverList = styled.div`
         }
         .de_active_class{
             color: ${({theme})=>theme.color.red_80};
+        }
+
+
+        @media only screen and (max-width: ${({theme})=>theme.breakPoint.small}){
+            grid-gap: 20px;
+
+            & .count{
+                font-size: ${({theme})=>theme.fontSize.h4_font_size};
+            }
+            & .percentage{
+                font-size: ${({theme})=>theme.fontSize.body3_font_size};
+            }
+            & .middle_left {
+                .top_author{
+                    width: 46px;
+                    height: 46px;
+                }
+                & span img{
+                    width: 30px;
+
+                }
+            }
         }
     }
 

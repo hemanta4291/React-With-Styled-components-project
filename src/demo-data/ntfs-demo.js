@@ -12,6 +12,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['arts','gaming','all categories']
@@ -22,6 +24,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','all categories']
@@ -32,6 +36,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['music','celebrities','all categories']
@@ -42,6 +48,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','crypto','all categories']
@@ -52,6 +60,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','crypto','all categories']
@@ -62,6 +72,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','music','all categories']
@@ -72,6 +84,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['arts','all categories']
@@ -82,6 +96,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','all categories']
@@ -92,6 +108,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['arts','gaming','all categories']
@@ -102,6 +120,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','all categories']
@@ -112,6 +132,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['music','celebrities','all categories']
@@ -122,6 +144,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','crypto','all categories']
@@ -132,6 +156,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','crypto','all categories']
@@ -142,6 +168,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','music','all categories']
@@ -152,6 +180,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['arts','all categories']
@@ -162,6 +192,8 @@ import DiscoverPersion4 from '../assets/images/discover-persion4.png'
             "time": "3h 50m 2s left",
             "bid_authors": [DiscoverPersion1,DiscoverPersion2,DiscoverPersion3,DiscoverPersion4],
             "out_of": "1 of 321",
+            "stock":321,
+            "sell":1,
             "thumbnail": demoImg,
             "place_bid":"Place a bid",
             "categories":['sport','all categories']

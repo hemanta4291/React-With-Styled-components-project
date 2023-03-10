@@ -11,7 +11,7 @@ const Footer = () => {
       <Container>
         <FooterContainer>
           <FooterLeft>
-            <img src={Logo} />
+          <Link to="/"> <img src={Logo} alt="header logo"/></Link>
             <p>The world’s first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital items.</p>
             <ul className='social'>
                 <li><Link to="/" className='facebook' >{Icons.facebook}</Link></li>
